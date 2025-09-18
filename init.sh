@@ -41,13 +41,6 @@ git clone https://github.com/city96/ComfyUI-GGUF.git || true
 git clone https://github.com/Kosinkadink/ComfyUI-KJNodes.git || true
 git clone https://github.com/pythongosssss/ComfyUI-Image-Saver.git || true
 
-# === FileBrowser для управления файлами ===
-cd /workspace
-curl -fsSL https://github.com/filebrowser/filebrowser/releases/latest/download/linux-amd64-filebrowser.tar.gz -o fb.tar.gz
-tar -xzf fb.tar.gz
-rm fb.tar.gz
-mv filebrowser /usr/local/bin/filebrowser
-
 # === Запуск сервисов ===
 echo "=== Запускаем ComfyUI на 3001 и FileBrowser на 8888 ==="
 cd /workspace/ComfyUI
