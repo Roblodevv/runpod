@@ -34,13 +34,3 @@ wget -nc -O /workspace/ComfyUI/models/loras/Wan21_T2V_14B_lightx2v_cfg_step_dist
 
 wget -nc -O /workspace/ComfyUI/models/loras/Lenovo.safetensors \
 "https://huggingface.co/Kulight/l3n0v0-lora/resolve/main/Lenovo.safetensors"
-
-# === Запуск сервисов ===
-echo "=== Запускаем ComfyUI на 3001 и FileBrowser на 8888 ==="
-cd /workspace/ComfyUI
-python main.py --listen 0.0.0.0 --port 3001 &
-
-cd /workspace
-filebrowser -r /workspace -p 8888 &
-
-wait
