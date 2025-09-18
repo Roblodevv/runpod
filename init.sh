@@ -45,6 +45,14 @@ git clone https://github.com/city96/ComfyUI-GGUF.git || true
 git clone https://github.com/Kosinkadink/ComfyUI-KJNodes.git || true
 git clone https://github.com/pythongosssss/ComfyUI-Image-Saver.git || true
 
-echo "=== Запуск ComfyUI ==="
+# Запуск ComfyUI на 8188
 cd /workspace/ComfyUI
-python main.py --listen 0.0.0.0 --port 8188
+python main.py --listen 0.0.0.0 --port 8188 &
+
+# Пример: второй сервис (например, простой HTTP-сервер на 3001)
+cd /workspace
+python -m http.server 3001 --bind 0.0.0.0 &
+ 
+# Ждём процессы
+wait
+
