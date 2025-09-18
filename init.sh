@@ -35,12 +35,6 @@ wget -nc -O /workspace/ComfyUI/models/loras/Wan21_T2V_14B_lightx2v_cfg_step_dist
 wget -nc -O /workspace/ComfyUI/models/loras/Lenovo.safetensors \
 "https://huggingface.co/Kulight/l3n0v0-lora/resolve/main/Lenovo.safetensors"
 
-# === Плагины ===
-cd /workspace/ComfyUI/custom_nodes
-git clone https://github.com/city96/ComfyUI-GGUF.git || true
-git clone https://github.com/Kosinkadink/ComfyUI-KJNodes.git || true
-git clone https://github.com/pythongosssss/ComfyUI-Image-Saver.git || true
-
 # === Запуск сервисов ===
 echo "=== Запускаем ComfyUI на 3001 и FileBrowser на 8888 ==="
 cd /workspace/ComfyUI
